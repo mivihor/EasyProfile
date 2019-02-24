@@ -1,0 +1,14 @@
+﻿<Window x:Class="EP.UControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EP"
+             mc:Ignorable="d" 
+             d:DesignHeight="309.993" d:DesignWidth="361.384" ResizeMode="CanMinimize" Title="EasyProfile">
+    <Grid>
+        <TextBox x:Name="FilePathTextBox" HorizontalAlignment="Left" Height="23" Margin="10,30,0,0" TextWrapping="Wrap" Text="Select File" VerticalAlignment="Top" Width="223"/>
+        <Button x:Name="BrowseButton" Content="BROWSE" HorizontalAlignment="Left" Margin="269,30,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.025,-0.2" Click="BrowseButton_Click" Height="23"/>
+
+    </Grid>
+</Window>
