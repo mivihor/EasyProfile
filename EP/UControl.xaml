@@ -5,10 +5,24 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EP"
              mc:Ignorable="d" 
-             d:DesignHeight="309.993" d:DesignWidth="361.384" ResizeMode="CanMinimize" Title="EasyProfile">
+             d:DesignHeight="300.488" d:DesignWidth="359.483" ResizeMode="CanMinimize" Title="EasyProfile" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner" Width="360" Height="300" MinWidth="360" MinHeight="300">
     <Grid>
-        <TextBox x:Name="FilePathTextBox" HorizontalAlignment="Left" Height="23" Margin="10,30,0,0" TextWrapping="Wrap" Text="Select File" VerticalAlignment="Top" Width="223"/>
-        <Button x:Name="BrowseButton" Content="BROWSE" HorizontalAlignment="Left" Margin="269,30,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.025,-0.2" Click="BrowseButton_Click" Height="23"/>
+        <TextBox x:Name="FilePathTextBox" HorizontalAlignment="Left" Height="23" Margin="10,30,0,0" TextWrapping="NoWrap" AcceptsReturn="False" Text="Select File" VerticalAlignment="Top" Width="235"/>
+        <Button x:Name="BrowseButton" Content="BROWSE" HorizontalAlignment="Left" Margin="260,30,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.025,-0.2" Click="BrowseButton_Click" Height="23"/>
+        <ComboBox x:Name="hScaleComboBox" HorizontalAlignment="Left" Margin="145,71,0,0" VerticalAlignment="Top" Width="100" AutomationProperties.Name="hScaleComboBox" Height="27" SelectionChanged="hScaleComboBox_SelectionChanged">
+            <ComboBoxItem Content="1:2000" HorizontalAlignment="Left" Width="97.9009900990099"/>
+            <ComboBoxItem Content="1:1000" HorizontalAlignment="Left" Width="97.9009900990099"/>
+            <ComboBoxItem Content="1:500" HorizontalAlignment="Left" Width="97.9009900990099"/>
+            <ComboBoxItem Content="1:200" HorizontalAlignment="Left" Width="97.9009900990099"/>
+        </ComboBox>
+        <Label x:Name="hScaleLabel" Content="Horizontal Scale :" HorizontalAlignment="Left" Margin="37,68,0,0" VerticalAlignment="Top" AutomationProperties.Name="hScaleLabel" AutomationProperties.HelpText="Select Horizontal Scale" Height="27" Width="103"/>
+        <ComboBox x:Name="vScaleComboBox" HorizontalAlignment="Left" Margin="145,100,0,0" VerticalAlignment="Top" Width="100" Height="27" AutomationProperties.Name="vScaleComboBox" SelectionChanged="vScaleComboBox_SelectionChanged">
+            <ComboBoxItem Content="1:1000" HorizontalAlignment="Left" Width="97.9009900990099"/>
+            <ComboBoxItem Content="1:500" HorizontalAlignment="Left" Width="97.9009900990099"/>
+            <ComboBoxItem Content="1:200" HorizontalAlignment="Left" Width="97.9009900990099"/>
+            <ComboBoxItem Content="1:100" HorizontalAlignment="Left" Width="97.9009900990099"/>
+        </ComboBox>
+        <Label x:Name="vScaleLabel" Content="Vertical Scale :" HorizontalAlignment="Left" Margin="37,100,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
