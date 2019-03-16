@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace EP
 {
-    class Utility
+    public static class Utility
     {
+
     }
 }
