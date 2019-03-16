@@ -8,6 +8,7 @@ namespace EP.Entities
 {
     public class Point
     {
+        public string PointName { get; set; }
         public double N { get; set; }
         public double E { get; set; }
         public double H { get; set; }
