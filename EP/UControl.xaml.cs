@@ -21,9 +21,14 @@ namespace EP
     /// </summary>
     public partial class UControl : Window
     {
+        public double hScale = 0.5;
+        public double vScale = 1;
+
         public UControl()
         {
             InitializeComponent();
+            hScaleComboBox.SelectedIndex = 0;
+            vScaleComboBox.SelectedIndex = 0;
         }
 
         private void BrowseButton_Click(object sender, RoutedEventArgs e)
@@ -38,6 +43,44 @@ namespace EP
             {
                 string filename = dlg.FileName;
                 FilePathTextBox.Text = filename;
+            }
+        }
+
+        private void hScaleComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (hScaleComboBox.SelectedIndex)
+            {
+                case 0:
+                    hScale = 0.5;
+                    break;
+                case 1:
+                    hScale = 1;
+                    break;
+                case 2:
+                    hScale = 2;
+                    break;
+                case 3:
+                    hScale = 5;
+                    break;
+            }
+        }
+
+        private void vScaleComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (vScaleComboBox.SelectedIndex)
+            {
+                case 0:
+                    vScale = 1;
+                    break;
+                case 1:
+                    vScale = 2;
+                    break;
+                case 2:
+                    vScale = 5;
+                    break;
+                case 3:
+                    vScale = 10;
+                    break;
             }
         }
     }
